@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111b31">
+  <meta name="description" content="GrowthLab: a SaaS product decision studio connecting onboarding friction, retention, experiments, and commercial impact.">
+  <title>GrowthLab — Product Growth Studio</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <a class="brand" href="#overview" aria-label="GrowthLab home">
+        <span class="brand-mark" aria-hidden="true"><span>↗</span></span>
+        <span class="brand-name">Growth<span>Lab</span><small>PRODUCT INTELLIGENCE</small></span>
+      </a>
+
+      <div class="nav-group-label">WORKSPACE</div>
+      <nav class="side-nav">
+        <a data-nav class="active" href="#overview"><span class="nav-glyph">◫</span> Overview</a>
+        <a data-nav href="#journey"><span class="nav-glyph">⟶</span> User journey</a>
+        <a data-nav href="#retention"><span class="nav-glyph">▦</span> Retention</a>
+        <a data-nav href="#experiments"><span class="nav-glyph">⚗</span> Experiments</a>
+        <a data-nav href="#decision-lab"><span class="nav-glyph">◇</span> Decision lab</a>
+      </nav>
+      <div class="nav-group-label nav-secondary">PROJECT</div>
+      <nav class="side-nav">
+        <a data-nav href="#product-brief"><span class="nav-glyph">☷</span> Product brief</a>
+        <a href="https://github.com/JaiperumalJayaraman/GrowthLab" target="_blank" rel="noopener noreferrer"><span class="nav-glyph">⌘</span> Source code <span class="external">↗</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-demo">
+          <span class="sidebar-demo-icon">✳</span>
+          <strong>Built to show the why.</strong>
+          <p>From user friction to an evidence-led product decision.</p>
+        </div>
+        <div class="sidebar-caption">INDEPENDENT APM CASE STUDY · 2026</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="breadcrumbs">GrowthLab <span>/</span> Product studio <span>/</span> <b>Overview</b></div>
+        <div class="topbar-right"><span class="status-dot"></span> Reproducible demo <span class="top-divider"></span> <span class="initials" aria-label="Portfolio project">PM</span></div>
+      </header>
+
+      <div class="page-wrap">
+        <section class="hero" id="overview">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="mini-spark">✦</span> THE PRODUCT GROWTH WORKSPACE <span class="eyebrow-rule"></span> V1.0</div>
+            <h1>Turn product friction<br>into <span class="gradient-text">forward motion.</span></h1>
+            <p class="hero-sub">Find where new users get stuck. Validate what moves the needle. Make a growth decision you can explain.</p>
+            <div class="hero-ctas">
+              <a class="btn primary" href="#decision-lab">Explore decisions <span aria-hidden="true">↗</span></a>
+              <a class="btn secondary" href="#journey">See the journey <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <div class="hero-art" aria-label="Product challenge">
+            <div class="hero-art-top"><span class="hero-art-dot"></span> GROWTH OPPORTUNITY <span class="hero-art-number">01 / 03</span></div>
+            <div class="hero-art-question">Where do users lose their first moment of value?</div>
+            <div class="hero-signal"><span class="signal-icon">↗</span><span>Find the friction<br><strong>Fix the journey</strong></span></div>
+            <div class="hero-art-bottom">USER EXPERIENCE <span>·</span> DATA <span>·</span> BUSINESS IMPACT</div>
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          </div>
+        </section>
+
+        <div class="data-notice" role="note"><span class="notice-icon">i</span> <strong>Portfolio simulation</strong> <span>All users, treatments, and revenue are synthetic. Numbers are for product reasoning—not real performance claims.</span> <a href="#product-brief">Methodology ↓</a></div>
+
+        <section class="filter-panel" aria-label="Analytics filters">
+          <div class="filter-intro"><span class="filter-icon" aria-hidden="true">☷</span><span><strong>Audience explorer</strong><small>Every chart responds to your filters</small></span></div>
+          <div class="filter-controls">
+            <label>DEVICE <select id="device-filter"><option>All</option><option>Desktop</option><option>Mobile</option></select></label>
+            <label>ACQUISITION <select id="channel-filter"><option>All</option><option>Organic</option><option>Paid</option><option>Referral</option><option>Content</option></select></label>
+            <label>PLAN <select id="tier-filter"><option>All</option><option>Free</option><option>Trial</option></select></label>
+            <button class="reset-filter" id="reset-filters" type="button">Reset</button>
+          </div>
+        </section>
+
+        <section class="metrics-section" aria-label="North star metrics">
+          <div class="section-kicker"><span class="section-kicker-line"></span> PRODUCT HEALTH <span id="audience-count" class="small-faded"></span></div>
+          <div class="metric-grid">
+            <article class="metric-card">
+              <div class="metric-header"><span>Total signups</span><span class="metric-icon icon-indigo">↗</span></div>
+              <div class="metric-number" id="kpi-signups">—</div>
+              <div class="metric-foot"><span class="pill light">Acquisition</span><span>8 signup cohorts</span></div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-header"><span>First-task activation</span><span class="metric-icon icon-violet">◇</span></div>
+              <div class="metric-number" id="kpi-activation">—</div>
+              <div class="metric-foot"><span class="pill violet">North star</span><span id="activation-count">— activated</span></div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-header"><span>Week 4 retention</span><span class="metric-icon icon-mint">↻</span></div>
+              <div class="metric-number" id="kpi-retention">—</div>
+              <div class="metric-foot"><span class="pill mint">Engagement</span><span>of all signups</span></div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-header"><span>Synthetic MRR</span><span class="metric-icon icon-orange">$</span></div>
+              <div class="metric-number" id="kpi-revenue">—</div>
+              <div class="metric-foot"><span class="pill orange">Business</span><span>$29 per simulated payer</span></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="overview-panels" aria-label="Growth snapshot">
+          <article class="panel trend-panel">
+            <div class="panel-head"><div><div class="card-eyebrow">TREND ANALYSIS</div><h2>Activation over time</h2><p>Share of weekly signups who created their first task.</p></div><span class="tiny-label"><span class="legend-dot"></span> Activation rate</span></div>
+            <div id="trend-chart" class="trend-chart" role="img" aria-label="Activation trend across eight signup weeks"></div>
+            <div class="chart-foot"><span>WEEKLY SIGNUP COHORTS</span><span id="trend-caption"></span></div>
+          </article>
+          <article class="panel insight-panel">
+            <div class="card-eyebrow">PM LENS <span class="insight-asterisk">✳</span></div>
+            <h2>Don't optimize signups.<br><em>Optimize first value.</em></h2>
+            <p>Acquisition can grow while product value stays flat. Activation connects the first-time user experience to a meaningful outcome.</p>
+            <div class="insight-divider"></div>
+            <div class="insight-stat"><span class="insight-stat-arrow">↗</span><div><strong id="insight-activated">—</strong><small>people reached first value in this segment</small></div></div>
+            <a class="text-link" href="#journey">Find the bottleneck <span>→</span></a>
+          </article>
+        </section>
+
+        <section class="content-section" id="journey">
+          <div class="section-heading"><div><div class="section-kicker"><span class="section-kicker-line"></span> 01 / UNDERSTAND THE USER</div><h2>Where does the journey break?</h2><p>Click a funnel step to inspect the friction and connect it to a possible UX change.</p></div><span class="section-tag">USER EXPERIENCE</span></div>
+          <div class="two-column funnel-layout">
+            <article class="panel funnel-panel"><div class="panel-head compact"><div><h3>New-user conversion funnel</h3><p>Each percentage compares the step with the one above it.</p></div><span class="tiny-label">SELECT A STEP ↘</span></div><div id="funnel-rows" class="funnel-rows"></div></article>
+            <article class="panel diagnosis-panel">
+              <div class="card-eyebrow">FRICTION DIAGNOSIS <span class="diagnosis-symbol">↗</span></div>
+              <div class="diagnosis-main" id="step-insight"></div>
+              <div class="diagnosis-bottom"><span class="small-icon">◎</span><span>Design principle: remove cognitive load before adding new features.</span></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section" id="retention">
+          <div class="section-heading"><div><div class="section-kicker"><span class="section-kicker-line"></span> 02 / MEASURE LASTING VALUE</div><h2>Acquisition isn't retention.</h2><p>Track whether signup cohorts return after they reach their first task.</p></div><span class="section-tag">COHORT ANALYSIS</span></div>
+          <article class="panel retention-panel">
+            <div class="panel-head"><div><h3>Weekly retention matrix</h3><p>Percent of all signups active in each subsequent week. Week 0 is the signup baseline.</p></div><div class="heat-legend"><span>LOW</span><i class="heat-scale"></i><span>HIGH</span></div></div>
+            <div id="cohort-table" class="cohort-wrap"></div>
+            <div class="callout-muted"><strong>Interpretation matters.</strong> Cohort retention includes non-activated users in the denominator. The illustrative week-4 rate is not the same as retention among activated users.</div>
+          </article>
+        </section>
+
+        <section class="content-section" id="experiments">
+          <div class="section-heading"><div><div class="section-kicker"><span class="section-kicker-line"></span> 03 / TEST A HYPOTHESIS</div><h2>Ideas deserve experiments.</h2><p>Can guided project templates help new workspaces create a first project?</p></div><span class="section-tag">EXPERIMENT DESIGN</span></div>
+          <div class="experiment-grid">
+            <article class="panel experiment-card"><div class="variant-title"><span class="variant-dot control-dot"></span><strong>A / CONTROL</strong><span>Current blank workspace</span></div><div id="control-rate" class="variant-rate">—</div><div class="variant-unit">Workspace → first project</div><div class="variant-bar"><span id="control-bar"></span></div><div id="control-sample" class="variant-sample">—</div></article>
+            <article class="panel experiment-card"><div class="variant-title"><span class="variant-dot guided-dot"></span><strong>B / GUIDED</strong><span>Starter project templates</span></div><div id="guided-rate" class="variant-rate">—</div><div class="variant-unit">Workspace → first project</div><div class="variant-bar variant-bar-guided"><span id="guided-bar"></span></div><div id="guided-sample" class="variant-sample">—</div></article>
+            <article class="panel experiment-result"><div class="card-eyebrow">ILLUSTRATIVE READOUT</div><div class="result-lift" id="experiment-lift">—</div><div class="result-caption">absolute conversion lift</div><div id="experiment-verdict" class="result-badge">—</div><div class="result-divider"></div><div class="result-detail"><span>95% CI for lift</span><strong id="experiment-ci">—</strong></div><div class="result-detail"><span>Two-sided p-value</span><strong id="experiment-p">—</strong></div><div class="result-detail"><span>Sample ratio check</span><strong id="experiment-srm">—</strong></div></article>
+          </div>
+          <div class="experiment-note"><span>ⓘ</span> This is a simulated A/B comparison, not a real field experiment. Statistical output illustrates how to interpret evidence; it does not establish actual customer impact or external validity. <a href="./docs/EXPERIMENT_PLAN.md" target="_blank" rel="noopener noreferrer">Read experiment plan ↗</a></div>
+        </section>
+
+        <section class="content-section" id="decision-lab">
+          <div class="section-heading"><div><div class="section-kicker"><span class="section-kicker-line"></span> 04 / CHOOSE WHAT TO BUILD</div><h2>Make the trade-off visible.</h2><p>Prioritize the best opportunity, then stress-test its potential business value.</p></div><span class="section-tag">BUSINESS × PRODUCT</span></div>
+          <div class="decision-grid">
+            <article class="panel opportunity-panel"><div class="panel-head compact"><div><h3>Opportunity backlog</h3><p>Illustrative RICE model: reach × impact × confidence ÷ effort.</p></div><span class="tiny-label">RANKED BY SCORE</span></div><div id="opportunity-list"></div><div class="opportunity-note">Scores are directional and assumption-based, not measured causal effects.</div></article>
+            <article class="panel simulation-panel">
+              <div class="card-eyebrow">SCENARIO PLANNER <span class="scenario-indicator">● LIVE MODEL</span></div><h3>What if we removed friction?</h3><p class="sim-sub">Change assumptions to explore the size of the opportunity, not forecast real results.</p>
+              <label class="sim-label" for="scenario-stage">FUNNEL HANDOFF</label>
+              <select id="scenario-stage" class="scenario-select"><option value="0">Signup → workspace</option><option value="1">Workspace → project</option><option value="2">Project → first task</option></select>
+              <div class="slider-top"><label for="recovery-slider">Drop-offs recovered</label><strong id="recovery-value">20%</strong></div>
+              <input class="range" type="range" min="0" max="50" step="5" value="20" id="recovery-slider">
+              <div class="slider-bounds"><span>0%</span><span>50%</span></div>
+              <div class="slider-top"><label for="paid-slider">Recovered users converting to paid</label><strong id="paid-value">12%</strong></div>
+              <input class="range" type="range" min="0" max="30" step="1" value="12" id="paid-slider">
+              <div class="slider-bounds"><span>0%</span><span>30%</span></div>
+              <div class="scenario-outcome"><span>MODELLED INCREMENTAL MRR <span aria-hidden="true">↗</span></span><strong id="scenario-mrr">—</strong><small id="scenario-details">—</small></div>
+              <div class="scenario-disclaimer">Assumes downstream conversion stays constant and each additional payer generates $29/month. Excludes cost, churn, and uncertainty.</div>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section" id="product-brief">
+          <div class="section-heading"><div><div class="section-kicker"><span class="section-kicker-line"></span> 05 / SHOW YOUR REASONING</div><h2>The product brief.</h2><p>A portfolio case study should explain the problem, choice, risk, and validation plan—not just display charts.</p></div><span class="section-tag">PM STORYTELLING</span></div>
+          <div class="brief-grid">
+            <article class="brief-card"><div class="brief-number">01</div><h3>The user</h3><p>Small team founders and project leads signing up to organize work for the first time.</p><strong>JOB TO BE DONE</strong><div class="brief-quote">“Help me get my team working without spending an hour setting things up.”</div></article>
+            <article class="brief-card"><div class="brief-number">02</div><h3>The product bet</h3><p>Users facing a blank project canvas need a relevant, low-effort first step more than another feature.</p><strong>MVP</strong><div class="brief-quote">Three role-based starter templates with an optional skip path.</div></article>
+            <article class="brief-card"><div class="brief-number">03</div><h3>The guardrails</h3><p>Optimize first-task activation while monitoring setup completion, invitation rate, and longer-term retention.</p><strong>SUCCESS IS NOT</strong><div class="brief-quote">More clicks, more signups, or a statistical win with worse user trust.</div></article>
+          </div>
+          <div class="brief-bottom-grid">
+            <article class="panel hypothesis-panel"><div class="card-eyebrow">WRITE THE NEXT EXPERIMENT</div><h3>Practice the PM decision.</h3><p>Record a falsifiable hypothesis. Your note stays in this browser, not on a server.</p><label for="hypothesis-note" class="sr-only">Your experiment hypothesis</label><textarea id="hypothesis-note" rows="3" placeholder="If we offer starter templates during workspace setup, more new users will create a project because they avoid the blank canvas..."></textarea><div class="hypothesis-actions"><button id="save-hypothesis" type="button" class="btn primary">Save hypothesis <span>↗</span></button><span id="hypothesis-status" role="status" aria-live="polite">Stored only on this device</span></div></article>
+            <article class="panel method-panel"><div class="card-eyebrow">THE FULL STORY</div><h3>Explore the decision process.</h3><p>The GitHub project includes an actual problem statement, event definitions, PRD, UX scope, experiment guardrails, and trade-offs.</p><a href="./docs/CASE_STUDY.md" target="_blank" rel="noopener noreferrer">Read case study <span>↗</span></a><a href="./docs/PRD.md" target="_blank" rel="noopener noreferrer">Read product requirements <span>↗</span></a><button id="export-button" class="export-button" type="button">↓ Export filtered metrics as CSV</button></article>
+          </div>
+        </section>
+
+        <footer class="footer"><div><strong>Growth<span>Lab</span></strong><p>Designed for better product questions, not prettier vanity metrics.</p></div><div class="footer-meta">APM PORTFOLIO PROJECT · SYNTHETIC DATA · 2026</div></footer>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
