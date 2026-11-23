@@ -2,7 +2,7 @@ import { DEMO_USERS } from "./data.js";
 import { filterUsers, funnel, summary, cohortRetention, weeklyActivation, experiment, opportunities, simulateImpact, STAGES } from "./analytics.js";
 
 // Deliberately dependency-free: all calculations are reproducible, with no data leaving the browser.
-const state = { device: "All", channel: "All", tier: "All", selectedStage: 2, scenarioStage: 1, recovery: 20, paid: 12, selectedOpportunity: "templates" };
+const state = { device: "All", channel: "All", tier: "All", selectedStage: 1, scenarioStage: 1, recovery: 20, paid: 12, selectedOpportunity: "templates" };
 const byId = (id) => document.getElementById(id);
 const number = (n) => Math.round(n).toLocaleString("en-US");
 const percent = (p, digits = 1) => (100 * p).toFixed(digits) + "%";
@@ -107,7 +107,7 @@ function paintInsight(users) {
   byId("step-insight").innerHTML =
     '<div><h3>' + title + '</h3><p>' + question + '</p>' +
     '<div class="diagnosis-number">' + metric + '</div><div class="diagnosis-metric">' + label + (stage === 0 ? '' : ' · ' + percent(1 - row.stepRate) + ' drop-off') + '</div>' +
-    '<div class="diagnosis-action"><strong>PRODUCT OPPORTUNITY</strong><span>' + stepIdeas[stage] + '</span></div></div>';
+    '<div class="diagnosis-action"><strong>PRODUCT OPPORTUNITY</strong><span>' + stepIdeas[stage] + '</span><a href="./prototype.html" class="try-prototype">Try the interactive onboarding prototype ↗</a></div></div>';
 }
 
 function paintRetention(users) {

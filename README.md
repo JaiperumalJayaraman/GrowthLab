@@ -20,7 +20,7 @@ Requires **Node.js 18+**. No dependencies, environment variables, API keys, or s
 npm run dev
 ```
 
-Open **http://localhost:4173** in your browser.
+Open **http://localhost:4173** in your browser. Try the interactive control-vs-guided onboarding at **http://localhost:4173/prototype.html**.
 
 Run the analytics test suite:
 
@@ -34,6 +34,7 @@ For a deployed demo, the site is entirely static and can be published using GitH
 
 | Workspace | What it demonstrates |
 | --- | --- |
+| UX concept prototype | Working control vs guided onboarding with local event trace | 
 | Growth overview | Activation and acquisition trends from reproducible user events |
 | Onboarding funnel | Step-wise conversion, friction, and selectable diagnosis |
 | Retention cohorts | Week 1–4 retention by signup cohort |

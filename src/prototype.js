@@ -10,7 +10,7 @@ let state;
 
 function record(event) { state.events.push({ event, elapsed_ms: Date.now() - state.startedAt, variant: state.variant }); }
 function reset(variant) {
-  state = { variant, step: 0, workspace: "", project: "", task: "", template: -1, invited: false, startedAt: Date.now(), events: [] };
+  state = { variant, step: 0, workspace: "", project: "", task: "", template: -1, skipTemplate: false, invited: false, startedAt: Date.now(), events: [] };
   record("journey_started");
   render();
 }
@@ -22,7 +22,7 @@ function content() {
     '</p><label class="proto-field-label" for="workspace-input">Workspace name</label><input class="proto-input" id="workspace-input" maxlength="60" placeholder="e.g. Northstar Team" value="' + escapeText(state.workspace) + '">' +
     '<div class="proto-help">A workspace is where you and your collaborators organize projects.</div>';
 
-  if (state.step === 1 && state.variant === "control") return '<h2>Create your first project.</h2><p>Your workspace is ready. Start from a blank project, then create your first task.</p>' +
+  if (state.step === 1 && (state.variant === "control" || state.skipTemplate)) return '<h2>Create your first project.</h2><p>Your workspace is ready. Start from a blank project, then create your first task.</p>' +
     '<label class="proto-field-label" for="project-input">Project name</label><input class="proto-input" id="project-input" maxlength="60" placeholder="What will your team work on?" value="' + escapeText(state.project) + '">' +
     '<div class="proto-help">You need to decide how to structure your project before you can get started.</div>';
 
@@ -76,8 +76,10 @@ function render() {
     render();
   }));
   if (el("skip-template")) el("skip-template").addEventListener("click", () => {
-    state.variant = "control";
+    state.skipTemplate = true;
     state.template = -1;
+    state.project = "";
+    state.task = "";
     record("opted_for_blank_project");
     render();
   });
@@ -98,7 +100,7 @@ function advance() {
     state.workspace = state.workspace.trim();
     record("workspace_created");
   } else if (state.step === 1) {
-    if (state.variant === "guided" && state.template < 0) { showError("Choose a template or start with a blank project."); return; }
+    if (state.variant === "guided" && state.template < 0 && !state.skipTemplate) { showError("Choose a template or start with a blank project."); return; }
     if (!state.project.trim()) { showError("Give your first project a name."); return; }
     state.project = state.project.trim();
     record("first_project_created");
